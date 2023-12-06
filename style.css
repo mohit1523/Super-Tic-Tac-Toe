@@ -1,0 +1,144 @@
+/* IMPORT STATEMENTS */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Playfair+Display&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: slategray;
+  overflow: hidden;
+}
+
+.main-div {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.outer-box {
+  position: relative;
+  border: 4px solid black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+.outer-box:hover {
+  background: none;
+}
+
+.inner-box {
+  height: calc(10vmin - 4px);
+  aspect-ratio: 1 / 1;
+  border: 1px solid black;
+  display: grid;
+  place-items: center;
+}
+
+.inner-box:hover{
+  background-color: rgba(47, 79, 79, 0.5);
+}
+
+.inner-box span {
+  font-size: 2vmax;
+}
+
+.outer-box > .inner-box:nth-child(1) {
+  border-top: 0;
+  border-left: 0;
+}
+.outer-box > .inner-box:nth-child(1) {
+  border-top: 0;
+  border-left: 0;
+}
+.outer-box > .inner-box:nth-child(1) {
+  border-top: 0;
+  border-left: 0;
+}
+.outer-box > .inner-box:nth-child(2) {
+  border-top: 0;
+}
+.outer-box > .inner-box:nth-child(3) {
+  border-top: 0;
+  border-right: 0;
+}
+.outer-box > .inner-box:nth-child(4) {
+  border-left: 0;
+}
+.outer-box > .inner-box:nth-child(6) {
+  border-right: 0;
+}
+.outer-box > .inner-box:nth-child(7) {
+  border-bottom: 0;
+  border-left: 0;
+}
+.outer-box > .inner-box:nth-child(8) {
+  border-bottom: 0;
+}
+.outer-box > .inner-box:nth-child(9) {
+  border-bottom: 0;
+  border-right: 0;
+}
+
+#cursor{
+  position: absolute;
+  z-index: 10;
+  color: white;
+  backdrop-filter: blur(2px);
+}
+
+.player-details table{
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+}
+
+
+.player-details img{
+  width: 20vmax;
+}
+
+#player-1 , #player-2{
+  padding: 20px 10px 10px;
+  font-family: 'Audiowide' , sans-serif;
+  font-size: 1.25vmax;
+}
+
+#x-point , #o-point{
+  font-size: 2.5vmax;
+  padding: 10px;
+  font-family: 'Playfair Display' , cursive;
+}
+
+/* CODE FOR ANIMATION */
+
+@keyframes letterAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 650px ) {
+  body{
+    flex-direction: column;
+  }
+  #cursor{
+    display: none;
+  }
+  .player-details{
+    margin-top: 3vh;
+  }
+}

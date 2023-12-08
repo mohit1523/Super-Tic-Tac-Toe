@@ -14,7 +14,6 @@ body {
   align-items: center;
   justify-content: space-evenly;
   background-color: slategray;
-  overflow: hidden;
 }
 
 .main-div {
